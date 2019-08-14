@@ -49,7 +49,7 @@ speaksArabic = speaksArabic.toUpperCase();
 document.write("<p>Do you think I speak Arabic?</p>");
 
 if(speaksArabic === 'Y' || speaksArabic === 'YES') {
-  document.write("<p>You answered yes. I do NOT speak Arabic.</p>");
+  document.write("<p>You answered yes. You are incorrect! I do NOT speak Arabic.</p>");
 } else if (speaksArabic === 'N' || speaksArabic === 'NO') {
   document.write("<p>You answered no. Correct!</p>");
   numCorrect++;
@@ -59,4 +59,23 @@ if(speaksArabic === 'Y' || speaksArabic === 'YES') {
 document.write("<hr>");
 
 console.log('Answer to "speaks Arabic" question: ' + speaksArabic);
+console.log(numCorrect + ' of 5 correct');
+
+//Fourth yes/no question
+var likesIceClimbing = prompt('Do I like to scale icy mountains?'); 
+likesIceClimbing = likesIceClimbing.toUpperCase();
+
+document.write("<p>Do you think I like to climb ice?</p>");
+
+if(likesIceClimbing === 'Y' || likesIceClimbing === 'YES') {
+  document.write("<p>You answered yes. Wrong! Ice climbing has no appeal for me whatsoever.</p>");
+} else if (likesIceClimbing === 'N' || likesIceClimbing === 'NO') {
+  document.write("<p>You answered no. Correct!</p>");
+  numCorrect++;
+} else {
+  document.write("<p>You entered an invalid answer.</p>");
+}
+document.write("<hr>");
+
+console.log('Answer to "like ice climbing" question: ' + likesIceClimbing);
 console.log(numCorrect + ' of 5 correct');
