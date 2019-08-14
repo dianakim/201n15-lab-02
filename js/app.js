@@ -79,3 +79,22 @@ document.write("<hr>");
 
 console.log('Answer to "like ice climbing" question: ' + likesIceClimbing);
 console.log(numCorrect + ' of 5 correct');
+
+//Fifth yes/no question
+var likesCheesecake = prompt('Do I think cheesecake is the best?'); 
+likesCheesecake = likesCheesecake.toUpperCase();
+
+document.write("<p>Do you think I like cheesecake?</p>");
+
+if(likesCheesecake === 'Y' || likesCheesecake === 'YES') {
+  document.write("<p>You answered yes. You are correct! Cheesecake is my favorite dessert.</p>");
+  numCorrect++;
+} else if (likesCheesecake === 'N' || likesCheesecake === 'NO') {
+  document.write("<p>You answered no. Wrong! </p>");
+} else {
+  document.write("<p>You entered an invalid answer.</p>");
+}
+document.write("<hr>");
+
+console.log('Answer to "likes cheesecake" question: ' + likesCheesecake);
+console.log(numCorrect + ' of 5 correct');
