@@ -1,0 +1,18 @@
+h1 {
+  background: #E88834;
+  color: #DDD393;
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
+  text-align: center;
+  padding: 30px;
+}
+
+body {
+  background: #B2ACAB;
+  font-family: 'Cinzel', serif;
+  color: #BE6022;
+}
+
+footer {
+  font-family: 'Vollkorn', serif;
+}

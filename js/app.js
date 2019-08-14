@@ -14,9 +14,9 @@ function validInput(answer) {
   answer = answer.toLowerCase();
   if(answer === 'y' || answer === 'yes' || answer === 'n' || answer === 'no') {
     return answer.charAt(0);
-  } else {
-    document.write('<p>You entered an invalid answer.</p>');
-    document.write('<hr>');
+  // } else {
+  //   document.write('<p>You entered an invalid answer.</p>');
+  //   document.write('<hr>');
   }
 }
 
@@ -61,7 +61,7 @@ if(arabicAnswer === validInput(speaksArabic)) {
   document.write('<hr>');
   numCorrect++;
 } else {
-  document.write('<p>Your guess was incorrect, though I can say thank you in Arabic.</p>');
+  document.write('<p>Your guess was incorrect.</p>');
   document.write('<hr>');
 }
 
