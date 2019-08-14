@@ -30,7 +30,7 @@ document.write("<p>Do you think I have any siblings?</p>");
 
 if(hasSiblings === 'Y' || hasSiblings === 'YES') {
   document.write("<p>You answered yes. You are correct! I have one sister and two brothers.</p>");
-  //tracks number of correct answers
+
   numCorrect++;
 } else if (hasSiblings === 'N' || hasSiblings === 'NO') {
   document.write("<p>You answered no. Wrong! I have 3 siblings.</p>");
@@ -38,6 +38,25 @@ if(hasSiblings === 'Y' || hasSiblings === 'YES') {
   document.write("<p>You entered an invalid answer.</p>");
 }
 document.write("<hr>");
-//Print a useful and descriptive console.log()
+
 console.log('Answer to "has siblings" question: ' + hasSiblings);
+console.log(numCorrect + ' of 5 correct');
+
+//Third yes/no question
+var speaksArabic = prompt('Do I speak Arabic?'); 
+speaksArabic = speaksArabic.toUpperCase();
+
+document.write("<p>Do you think I speak Arabic?</p>");
+
+if(speaksArabic === 'Y' || speaksArabic === 'YES') {
+  document.write("<p>You answered yes. I do NOT speak Arabic.</p>");
+} else if (speaksArabic === 'N' || speaksArabic === 'NO') {
+  document.write("<p>You answered no. Correct!</p>");
+  numCorrect++;
+} else {
+  document.write("<p>You entered an invalid answer.</p>");
+}
+document.write("<hr>");
+
+console.log('Answer to "speaks Arabic" question: ' + speaksArabic);
 console.log(numCorrect + ' of 5 correct');
