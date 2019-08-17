@@ -12,6 +12,16 @@ h1 {
   width: 100%;
 }
 
+h2 {
+  /* background: #E88834;
+  color: #DDD393; */
+  font-family: 'Merienda', cursive;
+  font-size: 1.2em;
+  /* text-align: center; */
+  padding: 1em 0 1em 0;
+  width: 100%;
+}
+
 main {
   background: #DDD393;
   font-family: 'Amiri', serif;
@@ -27,15 +37,16 @@ section {
   font-family: 'Amiri', serif;
 }
 
-nav li {
+.nav {
   float: left;
-  display: block;
-  text-align: center;
+  /* display: block; */
+  /* text-align: center; */
   text-decoration: none;
   margin: 2em;
   list-style-type: none;
   overflow: hidden;
   /* width: 100%; */
+  padding: 0;
 }
 
 .fixed-nav-bar {
@@ -54,4 +65,3 @@ footer {
   font-size: .75em;
   text-align: center;
 }
-

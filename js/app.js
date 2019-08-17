@@ -16,7 +16,7 @@ if(hasPets === 'y' || hasPets === 'yes') {
 } else {
   alert('You entered an invalid answer.');
 }
-
+document.getElementById('question-1').innerHTML = 'I have 4 dogs.';
 //Print a useful and descriptive console.log()
 console.log('Answer to "has pets" question: ' + hasPets);
 console.log(numCorrect + ' of 5 correct');
@@ -34,6 +34,7 @@ if(hasSiblings === 'Y' || hasSiblings === 'YES') {
   alert('You entered an invalid answer.');
 }
 
+document.getElementById('question-2').innerHTML = 'I have one sister and two brothers.';
 console.log('Answer to "has siblings" question: ' + hasSiblings);
 console.log(numCorrect + ' of 5 correct');
 
@@ -50,6 +51,7 @@ if(isTrilingual === 'Y' || isTrilingual === 'YES') {
   alert('You entered an invalid answer.');
 }
 
+document.getElementById('question-3').innerHTML = 'I am fluent in just the English language.';
 console.log('Answer to "is trilingual" question: ' + isTrilingual);
 console.log(numCorrect + ' of 5 correct');
 
@@ -66,6 +68,7 @@ if(likesIceClimbing === 'Y' || likesIceClimbing === 'YES') {
   alert('You entered an invalid answer.');
 }
 
+document.getElementById('question-4').innerHTML = 'I\'ve never tried ice climbing and NEVER want to.';
 console.log('Answer to "like ice climbing" question: ' + likesIceClimbing);
 console.log(numCorrect + ' of 5 correct');
 
@@ -82,6 +85,7 @@ if(likesCheesecake === 'Y' || likesCheesecake === 'YES') {
   alert('You entered an invalid answer.');
 }
 
+document.getElementById('question-5').innerHTML = 'Cheesecake is heavenly.';
 console.log('Answer to "likes cheesecake" question: ' + likesCheesecake);
 console.log(numCorrect + ' of 5 correct');
 
@@ -92,9 +96,8 @@ var yourScore = (numCorrect / 5) * 100;
 if(numCorrect >= 4) {
   alert('You got '+ yourScore + '% correct. Fantastic job!');
 } else {
-  alert('You only got ' + numCorrect + ' out of 5. That\'s only ' + yourScore + '% correct. Better luck next time.');
+  alert('You got ' + numCorrect + ' out of 5. That\'s only ' + yourScore + '% correct. Better luck next time.');
 }
-
 
 // //Store correct answers in variables for comparison
 // var petsAnswer = 'y';
