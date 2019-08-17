@@ -6,19 +6,17 @@ var hasPets = prompt('Do you think I have any pets?');
 //Convert input to all lower case or all upper case using .toLowerCase() or .toUpperCase();
 
 hasPets = hasPets.toLowerCase();
-//Print question to web page
-document.write('<p>Do you think I have any pets?</p>');
 //Check that input is valid using an if statement
 if(hasPets === 'y' || hasPets === 'yes') {
-  document.write('<p>You answered yes. You are correct! I have 4 dogs.</p>');
+  alert('You answered yes. You are correct! I have 4 dogs.');
   //tracks number of correct answers
   numCorrect++;
 } else if (hasPets === 'n' || hasPets === 'no') {
-  document.write('<p>You answered no. Wrong! I have 4 dogs.</p>');
+  alert('You answered no. Wrong! I have 4 dogs.');
 } else {
-  document.write('<p>You entered an invalid answer.</p>');
+  alert('You entered an invalid answer.');
 }
-document.write('<hr>');
+
 //Print a useful and descriptive console.log()
 console.log('Answer to "has pets" question: ' + hasPets);
 console.log(numCorrect + ' of 5 correct');
@@ -27,56 +25,46 @@ console.log(numCorrect + ' of 5 correct');
 var hasSiblings = prompt('Do you think I have any siblings?');
 hasSiblings = hasSiblings.toUpperCase();
 
-document.write('<p>Do you think I have any siblings?</p>');
-
 if(hasSiblings === 'Y' || hasSiblings === 'YES') {
-  document.write('<p>You answered yes. You are correct! I have one sister and two brothers.</p>');
-
+  alert('You answered yes. You are correct! I have one sister and two brothers.');
   numCorrect++;
 } else if (hasSiblings === 'N' || hasSiblings === 'NO') {
-  document.write('<p>You answered no. Wrong! I have 3 siblings.</p>');
+  alert('You answered no. Wrong! I have 3 siblings.');
 } else {
-  document.write('<p>You entered an invalid answer.</p>');
+  alert('You entered an invalid answer.');
 }
-document.write('<hr>');
 
 console.log('Answer to "has siblings" question: ' + hasSiblings);
 console.log(numCorrect + ' of 5 correct');
 
 //Third yes/no question
-var speaksArabic = prompt('Do I speak Arabic?');
-speaksArabic = speaksArabic.toUpperCase();
+var isTrilingual = prompt('Am I trilingual?');
+isTrilingual = isTrilingual.toUpperCase();
 
-document.write('<p>Do you think I speak Arabic?</p>');
-
-if(speaksArabic === 'Y' || speaksArabic === 'YES') {
-  document.write('<p>You answered yes. You are incorrect! I do NOT speak Arabic.</p>');
-} else if (speaksArabic === 'N' || speaksArabic === 'NO') {
-  document.write('<p>You answered no. Correct!</p>');
+if(isTrilingual === 'Y' || isTrilingual === 'YES') {
+  alert('You answered yes. You are incorrect! I speak one language fluently and French and Korean very poorly.');
+} else if (isTrilingual === 'N' || isTrilingual === 'NO') {
+  alert('You answered no. Correct!');
   numCorrect++;
 } else {
-  document.write('<p>You entered an invalid answer.</p>');
+  alert('You entered an invalid answer.');
 }
-document.write('<hr>');
 
-console.log('Answer to "speaks Arabic" question: ' + speaksArabic);
+console.log('Answer to "is trilingual" question: ' + isTrilingual);
 console.log(numCorrect + ' of 5 correct');
 
 //Fourth yes/no question
 var likesIceClimbing = prompt('Do I like to scale icy mountains?');
 likesIceClimbing = likesIceClimbing.toUpperCase();
 
-document.write('<p>Do you think I like to climb ice?</p>');
-
 if(likesIceClimbing === 'Y' || likesIceClimbing === 'YES') {
-  document.write('<p>You answered yes. Wrong! Ice climbing has no appeal for me whatsoever.</p>');
+  alert('You answered yes. Wrong! Ice climbing has no appeal for me whatsoever.');
 } else if (likesIceClimbing === 'N' || likesIceClimbing === 'NO') {
-  document.write('<p>You answered no. Correct!</p>');
+  alert('You answered no. Correct!');
   numCorrect++;
 } else {
-  document.write('<p>You entered an invalid answer.</p>');
+  alert('You entered an invalid answer.');
 }
-document.write('<hr>');
 
 console.log('Answer to "like ice climbing" question: ' + likesIceClimbing);
 console.log(numCorrect + ' of 5 correct');
@@ -85,17 +73,14 @@ console.log(numCorrect + ' of 5 correct');
 var likesCheesecake = prompt('Do I think cheesecake is the best?');
 likesCheesecake = likesCheesecake.toUpperCase();
 
-document.write('<p>Do you think I like cheesecake?</p>');
-
 if(likesCheesecake === 'Y' || likesCheesecake === 'YES') {
-  document.write('<p>You answered yes. You are correct! Cheesecake is my favorite dessert.</p>');
+  alert('You answered yes. You are correct! Cheesecake is my favorite dessert.');
   numCorrect++;
 } else if (likesCheesecake === 'N' || likesCheesecake === 'NO') {
-  document.write('<p>You answered no. Wrong! </p>');
+  alert('You answered no. Wrong!');
 } else {
-  document.write('<p>You entered an invalid answer.</p>');
+  alert('You entered an invalid answer.');
 }
-document.write('<hr>');
 
 console.log('Answer to "likes cheesecake" question: ' + likesCheesecake);
 console.log(numCorrect + ' of 5 correct');
@@ -105,9 +90,9 @@ console.log(numCorrect + ' of 5 correct');
 //Display final score
 var yourScore = (numCorrect / 5) * 100;
 if(numCorrect >= 4) {
-  document.write('<h2>You got '+ yourScore + '% correct. Fantastic job!</h2>');
+  alert('You got '+ yourScore + '% correct. Fantastic job!');
 } else {
-  document.write('<h2>You got '+ yourScore + '% correct. Better luck next time.</h2>');
+  alert('You only got ' + numCorrect + ' out of 5. That\'s only ' + yourScore + '% correct. Better luck next time.');
 }
 
 

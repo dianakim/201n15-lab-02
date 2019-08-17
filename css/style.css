@@ -1,18 +1,57 @@
+body {
+  padding: 1em;
+}
+  
 h1 {
   background: #E88834;
   color: #DDD393;
-  font-family: 'Lobster', cursive;
-  font-size: 40px;
+  font-family: 'Merienda', cursive;
+  font-size: 2em;
   text-align: center;
-  padding: 30px;
+  padding: 1em 0 1em 0;
+  width: 100%;
 }
 
-body {
-  background: #B2ACAB;
-  font-family: 'Cinzel', serif;
+main {
+  background: #DDD393;
+  font-family: 'Amiri', serif;
   color: #BE6022;
+  padding: 2.5em;
+}
+
+section {
+  margin: 1.5em 0 1.5em 0;
+}
+
+.travel-list {
+  font-family: 'Amiri', serif;
+}
+
+nav li {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: 2em;
+  list-style-type: none;
+  overflow: hidden;
+  /* width: 100%; */
+}
+
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  background-color: #00a087;
 }
 
 footer {
-  font-family: 'Vollkorn', serif;
+  font-family: 'Amiri', serif;
+  padding: 1em 2.5em 2.5em 2.5em;
+  font-size: .75em;
+  text-align: center;
 }
+

@@ -1,19 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Cinzel|Lobster|Vollkorn&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amiri|Cuprum|Merienda&display=swap" rel="stylesheet">
+
     <title>About Me</title>
     <link href="css/reset.css" type="text/css" rel="stylesheet" />
     <link href="css/style.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
     <header>
+      <nav class="fixed-nav-bar">
+        <ul>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#other">Other</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <h1>A guessing game about me!</h1>
+      <h1>About me!</h1>
       <hr>
+      <section id="experience">
+        <h2>Experience</h2>
+        <ul>The Summit Group, August 2002 – September 2015 | Analyst
+          <li>Determined initial financial feasibility of potential multifamily and senior affordable housing complexes</li>
+          <li>Managed due diligence collection, review and submission through all phases of construction/rehabilitation to expedite capital contributions</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Your results from the guessing game:</h2>
+        <ol id="results">
+          <li class="question-1"></li>
+          <li class="question-2"></li>
+          <li class="question-3"></li>
+          <li class="question-4"></li>
+          <li class="question-5"></li>
+          <li class="question-6"></li>
+          <li class="question-7"></li>
+        </ol>
+      </section>
+
+      <section id="other" class="bottom">
+        <ol class="travel-list">Top 10 Recent Countries Visited
+          <li>Egypt</li>
+          <li>Slovenia</li>
+          <li>Croatia</li>
+          <li>Bosnia-Herzegovina</li>
+          <li>Montenegro</li>
+          <li>Mexico</li>
+          <li>Canada</li>
+          <li>New Zealand</li>
+          <li>The Netherlands</li>
+          <li>Belgium</li>
+        </ol>
+      </section>
     </main>
     <footer>
+      Copyright &copy; 2019
     </footer>
     <script type="text/javascript" src="js/app.js" ></script>
   </body>
