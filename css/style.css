@@ -1,5 +1,6 @@
 body {
   padding: 1em;
+  line-height: 1.2;
 }
   
 h1 {
@@ -13,10 +14,9 @@ h1 {
 }
 
 h2 {
-  /* background: #E88834;
-  color: #DDD393; */
+  color: #61646B;
   font-family: 'Merienda', cursive;
-  font-size: 1.2em;
+  font-size: 1.6em;
   /* text-align: center; */
   padding: 1em 0 1em 0;
   width: 100%;
@@ -25,22 +25,29 @@ h2 {
 main {
   background: #DDD393;
   font-family: 'Amiri', serif;
-  color: #BE6022;
+  color: grey;
   padding: 2.5em;
+  font-size: 1.2em;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul {
+  list-style-type: square;
+}
+
+li {
+  margin-left: 2.5em;
 }
 
 section {
   margin: 1.5em 0 1.5em 0;
 }
 
-.travel-list {
-  font-family: 'Amiri', serif;
-}
-
 .nav {
   float: left;
-  /* display: block; */
-  /* text-align: center; */
   text-decoration: none;
   margin: 2em;
   list-style-type: none;

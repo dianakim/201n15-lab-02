@@ -2,6 +2,9 @@
 
 var numCorrect = 0;
 
+var gamer = prompt('Welcome! Please enter your name.');
+alert('Thank you, ' + gamer + '. Please press the ok button when you are ready to start the game.');
+
 var hasPets = prompt('Do you think I have any pets?');
 //Convert input to all lower case or all upper case using .toLowerCase() or .toUpperCase();
 
