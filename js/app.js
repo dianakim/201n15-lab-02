@@ -100,7 +100,7 @@ var myNum = 26;
 var userNum;
 var chances = 4;
 
-for(var i = 0; i <=4; i++) {
+for(var i = 0; i <= 4; i++) {
   userNum = parseFloat(prompt(gamer + ', guess how many dog beds I have.'));
 
   if (userNum > myNum) {
@@ -129,6 +129,55 @@ for(var i = 0; i <=4; i++) {
   }
 }
 
+//Seventh question
+// Prompt user to guess another country I've been in
+// User gets 6 chances
+// Answers are stored in an array
+// At the end, all correct answers are displayed to the user
+var myCountries = ['Germany', 'Indonesia', 'Nepal', 'Belize', 'France', 'England', 'Italy', 'The Netherlands', 'Belgium', 'Turks and Caicos', 'Saint Martin', 'Spain', 'Japan'];
+var userGuess;
+var countryString;
+
+//Loop through each chance to guess
+for(var tries = 0; tries <= 6; tries++) {
+  userGuess = prompt(gamer + ', guess one other country I have been to.');
+  userGuess = userGuess.toLowerCase();
+
+  //Loop through each item in array to compare with guess
+  for(var a = 0; a < myCountries.length; a++) {
+    //Check if there's a match to one in the array
+    if (userGuess !== myCountries[a].toLowerCase()) {
+      alert('Sorry, no match.');
+    } else if (userGuess === myCountries[a].toLowerCase()) {
+      alert('Yahoo! You got it right, ' + gamer + '. \n!');
+
+      numCorrect++;
+
+      //Loop through each item in array to concatenate for message
+      for(var y = 0; y < myCountries.length; y++) {
+        //Concatenate items in the array for printing later
+        if (y < 1) {
+          countryString = myCountries[y];
+        } else if (y >= 1) {
+          countryString = countryString + ', ' + myCountries[y];
+        }
+      }
+      document.getElementById('question-7').innerHTML = 'Other countries I\'ve visited are ' + countryString + '.';
+      console.log('Answer to "other countries" question: ' + userGuess);
+      console.log(numCorrect + ' of 7 correct');
+    }
+  }
+  //Check if any chances are left
+  if (chances >= 1) {
+    alert('You have ' + chances + ' more chances.');
+  } else {
+    alert('You\'re all out of chances.');
+    console.log('Answer to "other countries" question: ' + userGuess);
+    console.log(numCorrect + ' of 7 correct');
+    break;
+  }
+}
+
 //Display final score
 var yourScore = Math.round((numCorrect / 7) * 100);
 if (numCorrect >= 5) {
@@ -136,113 +185,3 @@ if (numCorrect >= 5) {
 } else {
   alert('You got ' + numCorrect + ' out of 7. That\'s only ' + yourScore + '% correct. Better luck next time, ' + gamer + '.');
 }
-
-// //Store correct answers in variables for comparison
-// var petsAnswer = 'y';
-// var siblingsAnswer = 'y';
-// var arabicAnswer = 'n';
-// var iceClimbingAnswer = 'n';
-// var cheesecakeAnswer = 'y';
-// var numCorrect = 0;
-// //Ask 5 yes/no questions and track number of correct answers
-
-// //validInput function converts inputs for each question to lower case, checks converted inputs to see if they match one of the acceptable answers, and returns only the first letter
-// function validInput(answer) {
-//   answer = answer.toLowerCase();
-//   if(answer === 'y' || answer === 'yes' || answer === 'n' || answer === 'no') {
-//     return answer.charAt(0);
-//   // } else {
-//   //   document.write('<p>You entered an invalid answer.</p>');
-//   //   document.write('<hr>');
-//   }
-// }
-
-// //Question #1
-// //If the answer is correct, display message and increment numCorrect to keep score
-// var hasPets = prompt('Do I have any pets?');
-// document.write('<p>Do I have any pets?</p>');
-
-// if(petsAnswer === validInput(hasPets)) {
-//   document.write('<p>Your guess was correct! I have 4 dogs.</p>');
-//   document.write('<hr>');
-//   numCorrect++;
-// } else {
-//   document.write('<p>Your guess was incorrect.</p>');
-//   document.write('<hr>');
-// }
-// console.log('Answer to "has pets" question: ' + hasPets);
-// console.log(numCorrect + ' of 5 correct');
-
-// //Question #2
-// var hasSiblings = prompt('Do I have any siblings?');
-// document.write('<p>Do I have any siblings?</p>');
-
-// if(siblingsAnswer === validInput(hasSiblings)) {
-//   document.write('<p>Your guess was correct! I have one sister and two brothers.</p>');
-//   document.write('<hr>');
-//   numCorrect++;
-// } else {
-//   document.write('<p>Your guess was incorrect.</p>');
-//   document.write('<hr>');
-// }
-
-// console.log('Answer to "has siblings" question: ' + hasSiblings);
-// console.log(numCorrect + ' of 5 correct');
-
-// //Question #3
-// var speaksArabic = prompt('Do I speak Arabic?');
-// document.write('<p>Do I speak Arabic?</p>');
-
-// if(arabicAnswer === validInput(speaksArabic)) {
-//   document.write('<p>Your guess was correct! I do NOT know how to speak Arabic.</p>');
-//   document.write('<hr>');
-//   numCorrect++;
-// } else {
-//   document.write('<p>Your guess was incorrect.</p>');
-//   document.write('<hr>');
-// }
-
-// console.log('Answer to "speaks Arabic" question: ' + speaksArabic);
-// console.log(numCorrect + ' of 5 correct');
-
-// //Question #4
-// var likesIceClimbing = prompt('Do I like to scale icy mountains?');
-// document.write('<p>Do I like to climb ice?</p>');
-
-// if(iceClimbingAnswer === validInput(likesIceClimbing)) {
-//   document.write('<p>Your guess was correct! Ice climbing has no appeal for me whatsoever.</p>');
-//   document.write('<hr>');
-//   numCorrect++;
-// } else {
-//   document.write('<p>Your guess was incorrect.</p>');
-//   document.write('<hr>');
-// }
-
-// console.log('Answer to "likes ice climbing" question: ' + likesIceClimbing);
-// console.log(numCorrect + ' of 5 correct');
-
-// //Question #5
-// var likesCheesecake = prompt('Do I think cheesecake is the best?');
-// document.write('<p>Do I like cheesecake?</p>');
-
-// if(cheesecakeAnswer === validInput(likesCheesecake)) {
-//   document.write('<p>Your guess was correct! J\'adore cheesecake!</p>');
-//   document.write('<hr>');
-//   numCorrect++;
-// } else {
-//   document.write('<p>Your guess was incorrect.</p>');
-//   document.write('<hr>');
-// }
-
-// console.log('Answer to "likes cheesecake" question: ' + likesCheesecake);
-// console.log(numCorrect + ' of 5 correct');
-
-// //Display final score
-// var yourScore = (numCorrect / 5) * 100;
-// if(numCorrect >= 4) {
-//   document.write('<h2>You guessed '+ yourScore + '% correct. Fantastic job!</h2>');
-// } else {
-//   document.write('<h2>You only guessed '+ yourScore + '% correct. Better luck next time.</h2>');
-// }
-
-//array of questions and associated responses for correct and incorrect
