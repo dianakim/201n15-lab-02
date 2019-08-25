@@ -192,18 +192,20 @@ function countriesQuestion() {
       break;
     } //end if
 
-    //Loop through each item in array to concatenate for message
-    for(var y = 0; y < myCountries.length; y++) {
-      //Concatenate items in the array for displaying later
-      if (y < 1) {
-        countryString = myCountries[y];
-      } else if (y >= 1) {
-        countryString = countryString + ', ' + myCountries[y];
-      } //end if
-    } //end for
-    document.getElementById('question-7').innerHTML = 'Other countries I\'ve visited are ' + countryString + '.';
   } //end for
-}
+
+  //Loop through each item in array to concatenate for message
+  for(var y = 0; y < myCountries.length; y++) {
+    //Concatenate items in the array for displaying later
+    if (y < 1) {
+      countryString = myCountries[y];
+    } else if (y >= 1) {
+      countryString = countryString + ', ' + myCountries[y];
+    } //end if
+  } //end for
+  document.getElementById('question-7').innerHTML = 'Other countries I\'ve visited are ' + countryString + '.';
+} //end function
+
 countriesQuestion();
 
 //Display final score
